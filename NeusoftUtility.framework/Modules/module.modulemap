@@ -1,0 +1,6 @@
+framework module NeusoftUtility {
+  umbrella header "NeusoftUtility.h"
+
+  export *
+  module * { export * }
+}
