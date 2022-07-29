@@ -116,7 +116,7 @@ Pod::Spec.new do |spec|
   #  Link your library with frameworks, or libraries. Libraries do not include
   #  the lib prefix of their name.
   #
-
+  # spec.resource  = "NeusoftUtility/NeusoftUtility.bundle"
   spec.ios.vendored_frameworks  = 'NeusoftUtility/NeusoftUtility.framework'
   spec.frameworks = 'UIKit','Foundation'
   spec.pod_target_xcconfig = { 'VALID_ARCHS' => 'x86_64 armv7 arm64' }
