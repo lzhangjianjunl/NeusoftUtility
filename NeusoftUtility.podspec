@@ -17,14 +17,16 @@ Pod::Spec.new do |spec|
 
   spec.name         = "NeusoftUtility"
   spec.version      = "0.0.1"
-  spec.summary      = "A short description of NeusoftUtility."
+  spec.summary      = "NeusoftUtility"
 
   # This description is used to generate tags and improve search results.
   #   * Think: What does it do? Why did you write it? What is the focus?
   #   * Try to keep it short, snappy and to the point.
   #   * Write the description between the DESC delimiters below.
   #   * Finally, don't worry about the indent, CocoaPods strips it!
-  spec.description  = "NeusoftUtility"
+  spec.description  = <<-DESC
+                  A short description of NeusoftUtility.
+                   DESC
 
   spec.homepage     = "http://peoplecc.online"
   # spec.screenshots  = "www.example.com/screenshots_1.gif", "www.example.com/screenshots_2.gif"
@@ -115,20 +117,25 @@ Pod::Spec.new do |spec|
   #  the lib prefix of their name.
   #
 
+  spec.ios.vendored_frameworks  = 'NeusoftUtility/NeusoftUtility.framework'
+  spec.frameworks = 'UIKit','Foundation'
+  spec.pod_target_xcconfig = { 'VALID_ARCHS' => 'x86_64 armv7 arm64' }
+  spec.preserve_paths = 'NeusoftUtility/NeusoftUtility.framework'
+
   # spec.framework  = "SomeFramework"
   # spec.frameworks = "SomeFramework", "AnotherFramework"
 
   # spec.library   = "iconv"
   # spec.libraries = "iconv", "xml2"
 
-
+  
   # ――― Project Settings ――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
   #
   #  If your library depends on compiler flags you can set them in the xcconfig hash
   #  where they will only apply to your library. If you depend on other Podspecs
   #  you can include multiple dependencies to ensure it works.
 
-  # spec.requires_arc = true
+  spec.requires_arc = true
 
   # spec.xcconfig = { "HEADER_SEARCH_PATHS" => "$(SDKROOT)/usr/include/libxml2" }
   # spec.dependency "JSONKit", "~> 1.4"
